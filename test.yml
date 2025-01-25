@@ -1,0 +1,21 @@
+# 
+
+
+- name: configuing tomcat
+  hosts: all
+  tasks:
+     - name: installing the tomcat
+       apt:
+         name: tomcat9
+         state: present
+         update_cache: yes
+     - name: install tomcat9-admin  
+       apt: 
+         name: tomcat9-admin
+         state: present
+         update_cache: no
+     - name: copy the tomcat.users.xml
+       copy:
+        src: tomcat.users.xml
+        dest: /etc/tomcat9
+        /   
