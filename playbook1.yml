@@ -1,11 +1,8 @@
----
-- name: creating the user
-  hosts: all
-  tasks:
-    - name: creating the user
-      user:
-        name: om
-        password: intelliqit
-        home: /tmp/om
-        shell: /bin/bash
----        
+- name: installing the apache2
+  hosts: local
+  tasks:  
+    - name: install the apache2
+      apt:
+        name: "{{a}}"
+        state: "{{b}}"
+        update_cache: "{{c}}"
