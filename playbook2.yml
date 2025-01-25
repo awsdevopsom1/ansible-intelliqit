@@ -1,5 +1,5 @@
 - name: installing the apache2
-  hosts: local
+  hosts: 172.31.90.227
   tasks:  
     - name: install the apache2
       user:
